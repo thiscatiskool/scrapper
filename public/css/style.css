@@ -1,0 +1,145 @@
+html {
+    position: relative;
+    min-height: 100%
+}
+
+body {
+    margin-bottom: 80px;
+    background-image: "../images/scrapers_collagelg.gif";
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-color: teal;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.jumbotron {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    font-family: "Source Code";
+    padding: 0;
+    box-shadow: 10px 5px 20px 2px lightcoral;
+}
+
+.jumbotron .overlay {
+    background: linear-gradient(grey, black);
+    position: absolute;
+    opacity: 0.7;
+    z-index: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.jumbotron .background-image {
+    height: 100%;
+    background-image: "../images/fake_news.jpg";
+    background-size: cover;
+}
+
+.jumbotron .caption {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+}
+
+.jumbotron .caption h1,
+.jumbotron .caption p {
+    color: white;
+}
+
+.jumbotron h1 {
+    font-weight: 800;
+    font-size: 80px;
+}
+
+.jumbotron p {
+    font-size: 30px;
+}
+
+.panel {
+    border-radius: 0;
+    box-shadow: 3px 3px 20px lightgoldenrodyellow;
+}
+
+.panel.panel-default .panel-heading {
+    background-color: antiquewhite;
+}
+
+.panel.panel-default .panel-heading h3{
+    color: brown
+}
+
+.panel.panel-default .panel-body {
+    font-size: 16px;
+}
+
+.footer {
+    background-color: goldenrod;
+    color: bisque;
+}
+
+.footer>.container>p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    font-weight: 800;
+    background: #0c7cd5;
+    padding: 10px;
+}
+
+.navbar-inverse .navbar-nav>li>a.scrape-new {
+    font-weight: 800;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.navbar-inverse .navbar-nav>li>a.scrape-new:hover{
+    background: #4caf50;
+}
+
+.navbar-inverse .navbar-nav>li>a.scrape-new:active{
+    background: #e51c23;
+}
+
+.scrape-new {
+    cursor: pointer;
+}
+
+.m-top-80 {
+    margin-top: 80px;
+}
+
+textarea {
+    resize: none;
+    padding: 10px;
+}
+
+.bootbox-body .btn {
+    float: right;
+    margin: 5px;
+}
+
+.note.list-group-item {
+    padding: 30px;
+}
+
+.note.list-group-item .btn {
+    position: relative;
+    bottom: 10px;
+}
