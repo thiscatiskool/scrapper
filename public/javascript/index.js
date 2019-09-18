@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+    
     var articleContainer = $(".article-container");
 
     $(document).on("click", ".btn.save", handleArticleSave);
@@ -88,7 +88,8 @@ $(document).ready(function(){
     function handleArticleScrape(){
         $.get("/api/fetch").then(function(data){
             initPage();
-            bootbox.alert("<h3 class = 'text-center m-top-80'>" + data.message + "</h3>");
+            alert(data.message);
+            //bootbox.alert("<h3 class = 'text-center m-top-80'>" + data.message + "</h3>");
         });
     }
 });

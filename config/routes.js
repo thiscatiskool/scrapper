@@ -34,7 +34,7 @@ module.exports = function(router){
         }
 
         headlinesController.get(query, function(data){
-            res.data(json);
+            res.json(data);
         });
     });
 

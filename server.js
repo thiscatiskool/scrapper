@@ -1,8 +1,8 @@
 //npm packages
 var express = require("express");
 var expressHandlebars = require("express-handlebars");
-var bodyParser = require("body-parser")
-var mongoose = require("mongoose")
+var bodyParser = require("body-parser");
+var mongoose = require("mongoose");
 
 //hosting express
 var PORT = process.env.PORT || 3000;
@@ -25,8 +25,8 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(router);
 
 //how we incorperate the mongoose db
-var db = process.env.MONGODB_URI || "mongodb: //localhost/mongoHeadlines";
-mongoose.connect(db, function(error){
+var db = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+mongoose.connect(db, {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true}, function(error){
     if(error){
         console.log(error);
     } else {

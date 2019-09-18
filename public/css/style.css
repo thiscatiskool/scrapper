@@ -130,7 +130,14 @@ textarea {
     padding: 10px;
 }
 
+/*
 .bootbox-body .btn {
+    float: right;
+    margin: 5px;
+}
+*/
+
+.alert-body .btn {
     float: right;
     margin: 5px;
 }

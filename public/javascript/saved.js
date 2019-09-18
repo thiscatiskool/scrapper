@@ -72,7 +72,7 @@ $(document).ready(function(){
 
     function renderNotesList(data){
         var notesToRender = [];
-        var currentNote,
+        var currentNote;
         if(!data.notes.length){
             currentNote = [
                 "<li class 'list-group-item'>",
@@ -102,7 +102,7 @@ $(document).ready(function(){
         var articleToDelete = $(this).parents(".panel").data();
         $.ajax({
             method: "DELETE",
-            url: "/api/headlines" + articleToDelete._id;
+            url: "/api/headlines" + articleToDelete._id,
         }).then(function(data){
             if(data.ok){
                 initPage();
@@ -125,7 +125,8 @@ $(document).ready(function(){
                 "<button class = 'btn btn-success save'> Save Note</button>",
                 "</div>"
             ].join("");
-            bootbox.dialog({
+            dialog({
+            //bootbox.dialog({
                 message: modalText,
                 closeButton: true,
             });
@@ -140,7 +141,8 @@ $(document).ready(function(){
 
     function handleNoteSave(){
         var noteData;
-        var newNote = $(".bootbox-body textarea").val().trim();
+        var newNote = $(".alert-body textarea").val().trim();
+        //$(".bootbox-body textarea").val().trim();
 
         if (newNote){
             noteData = {
@@ -148,7 +150,8 @@ $(document).ready(function(){
                 noteText: newNote,
             };
             $.post("/api/notes", noteData).then(function(){
-                bootbox.hideAll();
+                hideAll();
+                //bootbox.hideAll();
             });
         }
     }
@@ -160,7 +163,8 @@ $(document).ready(function(){
             url: "/api/notes" + noteToDelete,
             method: "DELETE",
         }).then(function(){
-            bootbox.hideAll()
+            hideAll();
+            //bootbox.hideAll();
         });
     }
 });
